@@ -14552,3 +14552,36 @@ blockquote p {
     right: -15px;
   }
 }
+.marquee {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+}
+
+.marquee div {
+    display: block;
+    position: absolute;
+    width: 300%;
+    overflow: hidden;
+    animation: marquee 20s linear infinite;
+}
+
+.marquee div:hover {
+    animation-play-state: paused;
+}
+
+.marquee span {
+    float: left;
+    width: 50%;
+}
+
+@keyframes marquee {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -100%;
+    }
+}
